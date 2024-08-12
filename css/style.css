@@ -1,0 +1,210 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  position: relative;
+}
+
+.container {
+  position: relative;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  z-index: 1; /* Memastikan container berada di atas canvas */
+}
+
+canvas {
+  position: fixed; /* Menggunakan fixed agar canvas selalu berada di belakang konten */
+  top: 0;
+  left: 0;
+  z-index: 0; /* Memastikan canvas berada di bawah container */
+  width: 100vw; /* Menggunakan viewport width */
+  height: 100vh; /* Menggunakan viewport height */
+  pointer-events: none; /* Menghindari interaksi dengan canvas */
+}
+
+h1,
+h2,
+p,
+label,
+button {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #333;
+}
+
+h2 {
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+form {
+  background-color: #f0f0f0; /* Light gray form background */
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.input-icon {
+  position: relative;
+}
+
+.input-icon i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+input[type="number"],
+input[type="text"] {
+  width: 100%;
+  padding: 10px 10px 10px 35px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #333;
+}
+
+.gender-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gender-group label {
+  margin: 0;
+  font-weight: normal;
+}
+
+.gender-group input[type="radio"] {
+  margin-right: 5px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+button[type="reset"] {
+  background-color: #6c757d;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 5px;
+}
+
+.bmi-result {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.bmi-result h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.bmi-result #bmiValue {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.bmi-result p {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #555;
+}
+
+.bmi-result button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 15px;
+  display: block;
+  width: 100%;
+  font-size: 14px;
+}
+
+.bmi-result button:hover {
+  opacity: 0.9;
+}
+
+/* Warna berdasarkan kategori BMI */
+.bmi-ideal {
+  color: #28a745; /* Hijau */
+}
+
+.bmi-underweight {
+  color: #dc3545; /* Merah */
+}
+
+.bmi-overweight {
+  color: #ffc107; /* Kuning */
+}
+
+.bmi-obese {
+  color: #dc3545; /* Merah */
+}
